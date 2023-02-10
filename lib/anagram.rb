@@ -8,13 +8,18 @@ class Anagram
     end
 
     def match(arr)
-        arr.map do |b|
-            compare_word = b.chars
-            input_word = @initial_word.chars
-            # puts input_word
-            if compare_word.sort == input_word.sort
-                compare_word.join("")
-            end
+        # arr.map do |b|
+            # compare_word = b.chars
+            # input_word = @initial_word.chars
+            # # puts input_word
+            # if compare_word.sort == input_word.sort
+            #     compare_word.join("")
+            # end
+
+
+        # end
+        arr.filter do |b|
+            b.chars.sort == @initial_word.chars.sort
         end
     end
 
